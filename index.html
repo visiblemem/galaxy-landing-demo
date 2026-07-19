@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#d8d2c5" />
-  <title>Visible Works — Architecture of Light</title>
+  <meta name="theme-color" content="#071522" />
+  <title>Visible Works — Ice Cathedral</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -12,64 +12,62 @@
 </head>
 <body>
   <canvas id="museumCanvas" aria-hidden="true"></canvas>
+  <div class="ice-haze" aria-hidden="true"></div>
   <div class="film-grain" aria-hidden="true"></div>
-  <div class="loading" id="loading"><span></span><p>Entering the light</p></div>
+  <div class="loading" id="loading"><span></span><p>Entering the glacier</p></div>
 
   <header class="topbar">
     <a class="wordmark" href="#entrance">VISIBLE WORKS</a>
-    <div class="topbar-center">ARCHITECTURE OF LIGHT / 2026</div>
+    <div class="topbar-center">ICE CATHEDRAL / 2026</div>
     <button class="sound-toggle" id="motionToggle" type="button">MOTION ON</button>
   </header>
 
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-  <div class="walk-cue" id="walkCue">SCROLL TO ENTER <i></i></div>
+  <div class="walk-cue" id="walkCue">SCROLL TO DESCEND <i></i></div>
 
   <main class="scroll-track">
     <section class="chapter chapter--hero" id="entrance">
       <div class="chapter-card chapter-card--hero">
         <span class="eyebrow">壹現工作室 / TAIPEI</span>
-        <h1>Light shapes<br><em>the space.</em></h1>
-        <p>一座由光、霧、水與純粹幾何構成的虛擬建築。滾動不是翻頁，而是穿過光本身。</p>
+        <h1>Inside the<br><em>blue silence.</em></h1>
+        <p>一座持續向深處生成的冰洞。光穿過半透明冰層，裂隙、氣泡與融水隨行進不斷改變。</p>
       </div>
     </section>
 
     <section class="chapter chapter--left" id="interior">
       <div class="chapter-card">
-        <span class="index">01</span><span class="eyebrow">LUMINOUS VOID</span>
-        <h2>Silence held<br>inside light.</h2>
-        <p>巨大光井切開白色量體，讓明暗成為空間最主要的材料。</p>
-        <a href="#exhibition">Continue walking ↘</a>
+        <span class="index">01</span><span class="eyebrow">GLACIAL VEINS</span>
+        <h2>Light trapped<br>inside ice.</h2>
+        <p>冰層內部的藍色脈絡隨著視角變化顯現，像光被封存在數千年的冰裡。</p>
       </div>
     </section>
 
     <section class="chapter chapter--right" id="exhibition">
       <div class="chapter-card">
-        <span class="index">02</span><span class="eyebrow">REFLECTIVE HORIZON</span>
-        <h2>Sky beneath<br>your feet.</h2>
-        <p>鏡面水池將光帶延伸至地面，空間邊界因此變得不確定。</p>
-        <a href="#ai">Continue walking ↘</a>
+        <span class="index">02</span><span class="eyebrow">MELTWATER MIRROR</span>
+        <h2>A second cave<br>below your feet.</h2>
+        <p>地面薄水層反射洞頂，細小波紋讓整個空間像在緩慢呼吸。</p>
       </div>
     </section>
 
     <section class="chapter chapter--left" id="ai">
       <div class="chapter-card">
-        <span class="index">03</span><span class="eyebrow">CHROMATIC FIELD</span>
-        <h2>Color becomes<br>architecture.</h2>
-        <p>冷暖光場在行走過程中緩慢交替，形成介於建築與裝置之間的感知空間。</p>
-        <a href="#contact">Continue walking ↘</a>
+        <span class="index">03</span><span class="eyebrow">FROZEN ATMOSPHERE</span>
+        <h2>Cold air made<br>visible.</h2>
+        <p>漂浮冰晶、霧氣與遠方冷光共同形成真實的空氣透視與深度。</p>
       </div>
     </section>
 
     <section class="chapter chapter--final" id="contact">
       <div class="chapter-card chapter-card--final">
-        <span class="eyebrow">BEYOND THE LIGHT</span>
-        <h2>Let’s create<br><em>the next space.</em></h2>
+        <span class="eyebrow">AT THE END OF THE GLACIER</span>
+        <h2>Let’s create<br><em>the next world.</em></h2>
         <a class="contact-link" href="mailto:studio@visible-works.com">studio@visible-works.com ↗</a>
         <small>VISIBLE WORKS · TAIPEI · 2026</small>
       </div>
     </section>
   </main>
 
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

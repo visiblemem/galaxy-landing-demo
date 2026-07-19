@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.180.0/build/three.module.js"
+      }
+    }
+  </script>
 </head>
 <body>
   <canvas id="museumCanvas" aria-hidden="true"></canvas>
@@ -26,48 +33,13 @@
   <div class="walk-cue" id="walkCue">SCROLL TO GLIDE <i></i></div>
 
   <main class="scroll-track">
-    <section class="chapter chapter--hero" id="entrance">
-      <div class="chapter-card chapter-card--hero">
-        <span class="eyebrow">壹現工作室 / TAIPEI</span>
-        <h1>Gliding through<br><em>liquid light.</em></h1>
-        <p>視角像一艘看不見的船持續向前。水面被船身切開，尾流、漣漪與反光在身後展開。</p>
-      </div>
-    </section>
-
-    <section class="chapter chapter--left" id="interior">
-      <div class="chapter-card">
-        <span class="index">01</span><span class="eyebrow">THE WAKE</span>
-        <h2>Motion written<br>on water.</h2>
-        <p>兩道 V 形尾流向外擴散，細碎波峰與泡沫持續被推向後方。</p>
-      </div>
-    </section>
-
-    <section class="chapter chapter--right" id="exhibition">
-      <div class="chapter-card">
-        <span class="index">02</span><span class="eyebrow">REFLECTED SKY</span>
-        <h2>The horizon<br>moves with you.</h2>
-        <p>天空、雲層與低角度日光被水面扭曲，形成不斷變形的反射。</p>
-      </div>
-    </section>
-
-    <section class="chapter chapter--left" id="ai">
-      <div class="chapter-card">
-        <span class="index">03</span><span class="eyebrow">LIQUID ATMOSPHERE</span>
-        <h2>Depth without<br>an edge.</h2>
-        <p>霧化遠景、微風水紋與亮面高光共同建立一片無盡水域。</p>
-      </div>
-    </section>
-
-    <section class="chapter chapter--final" id="contact">
-      <div class="chapter-card chapter-card--final">
-        <span class="eyebrow">BEYOND THE HORIZON</span>
-        <h2>Let’s create<br><em>the next world.</em></h2>
-        <a class="contact-link" href="mailto:studio@visible-works.com">studio@visible-works.com ↗</a>
-        <small>VISIBLE WORKS · TAIPEI · 2026</small>
-      </div>
-    </section>
+    <section class="chapter chapter--hero" id="entrance"><div class="chapter-card chapter-card--hero"><span class="eyebrow">壹現工作室 / TAIPEI</span><h1>Gliding through<br><em>liquid light.</em></h1><p>視角像一艘看不見的船持續向前。水面被船身切開，尾流、漣漪與反光在身後展開。</p></div></section>
+    <section class="chapter chapter--left" id="interior"><div class="chapter-card"><span class="index">01</span><span class="eyebrow">THE WAKE</span><h2>Motion written<br>on water.</h2><p>兩道 V 形尾流向外擴散，細碎波峰與泡沫持續被推向後方。</p></div></section>
+    <section class="chapter chapter--right" id="exhibition"><div class="chapter-card"><span class="index">02</span><span class="eyebrow">REFLECTED SKY</span><h2>The horizon<br>moves with you.</h2><p>天空與低角度日光由連續法線反射，不再使用方塊狀隨機亮點。</p></div></section>
+    <section class="chapter chapter--left" id="ai"><div class="chapter-card"><span class="index">03</span><span class="eyebrow">LIQUID ATMOSPHERE</span><h2>Depth without<br>an edge.</h2><p>多組 Gerstner 波、自然菲涅耳反射與連續尾流共同建立無盡水域。</p></div></section>
+    <section class="chapter chapter--final" id="contact"><div class="chapter-card chapter-card--final"><span class="eyebrow">BEYOND THE HORIZON</span><h2>Let’s create<br><em>the next world.</em></h2><a class="contact-link" href="mailto:studio@visible-works.com">studio@visible-works.com ↗</a><small>VISIBLE WORKS · TAIPEI · 2026</small></div></section>
   </main>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

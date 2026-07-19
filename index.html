@@ -11,12 +11,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="space-background" aria-hidden="true">
+    <canvas id="nebulaCanvas"></canvas>
+    <div class="global-vignette"></div>
+    <div class="cursor-glow"></div>
+  </div>
+
   <main class="shell">
     <section class="hero" id="home">
-      <canvas id="nebulaCanvas" aria-hidden="true"></canvas>
-      <div class="hero-vignette" aria-hidden="true"></div>
-      <div class="cursor-glow" aria-hidden="true"></div>
-
       <header class="nav reveal">
         <a class="brand" href="#home">N</a>
         <nav class="nav-links">

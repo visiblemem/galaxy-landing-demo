@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#07131d" />
   <title>Nova — Immersive Web Experience</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,105 +11,71 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page-glow page-glow--left"></div>
-  <div class="page-glow page-glow--right"></div>
-
+  <canvas id="spaceCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
   <main class="shell">
     <section class="hero" id="home">
       <div class="aurora" aria-hidden="true">
         <div class="nebula nebula--cyan"></div>
         <div class="nebula nebula--blue"></div>
         <div class="nebula nebula--rose"></div>
+        <div class="energy-wave wave-a"></div>
+        <div class="energy-wave wave-b"></div>
         <div class="star-layer star-layer--1"></div>
         <div class="star-layer star-layer--2"></div>
-        <div class="star-layer star-layer--3"></div>
         <div class="horizon"></div>
       </div>
 
-      <header class="nav glass-line">
-        <a class="brand" href="#home" aria-label="Nova 首頁">N</a>
-        <nav class="nav-links" aria-label="主要導覽">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a href="#showcase">Showcase</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#launch">Launch</a>
+      <header class="nav glass-line reveal">
+        <a class="brand" href="#home">N</a>
+        <nav class="nav-links">
+          <a href="#home">Home</a><a href="#features">Features</a><a href="#showcase">Showcase</a><a href="#launch">Launch</a>
         </nav>
-        <a class="pill pill--light" href="#launch">Start Creating <span>↗</span></a>
+        <a class="pill pill--light magnetic" href="#launch">Start Creating ↗</a>
       </header>
 
       <div class="hero-content">
-        <div class="announcement"><span>New</span> AI-powered design generation now live <b>↗</b></div>
-        <h1>Design the Future of Web<br />Experiences</h1>
-        <p class="hero-copy">Generate high-quality, production-ready landing pages, websites and web apps in minutes — no design team required.</p>
-
-        <div class="hero-actions">
-          <a class="link-button" href="#launch">Start Creating <span>↗</span></a>
-          <button class="link-button link-button--ghost" id="demoButton" type="button">View Demo <span class="play">▶</span></button>
+        <div class="announcement reveal"><span>New</span> AI-powered design generation now live ↗</div>
+        <h1 class="reveal">Design the Future of Web<br />Experiences</h1>
+        <p class="hero-copy reveal">Generate production-ready digital experiences with luminous motion, layered depth and cinematic interaction.</p>
+        <div class="hero-actions reveal">
+          <a class="link-button magnetic" href="#launch">Start Creating ↗</a>
+          <button class="link-button link-button--ghost magnetic" id="demoButton" type="button">View Demo ▶</button>
         </div>
-
         <div class="metrics" id="features">
-          <article class="metric-card">
-            <span class="metric-icon">◉</span>
-            <strong>2.3 Min</strong>
-            <small>Average generation time</small>
-          </article>
-          <article class="metric-card">
-            <span class="metric-icon">◎</span>
-            <strong>12K+</strong>
-            <small>Sites launched this month</small>
-          </article>
+          <article class="metric-card tilt reveal"><span class="metric-icon">◉</span><strong data-count="2.3">0</strong><em>Min</em><small>Average generation time</small></article>
+          <article class="metric-card tilt reveal"><span class="metric-icon">◎</span><strong data-count="12">0</strong><em>K+</em><small>Sites launched this month</small></article>
         </div>
-
-        <div class="trusted" id="showcase">
+        <div class="trusted reveal" id="showcase">
           <span>Trusted by design-forward teams</span>
-          <div class="logo-row" aria-label="合作品牌">
-            <i>Stripe</i><i>Vercel</i><i>Linear</i><i>Figma</i><i>Notion</i>
-          </div>
+          <div class="logo-row"><i>Stripe</i><i>Vercel</i><i>Linear</i><i>Figma</i><i>Notion</i></div>
         </div>
       </div>
-
+      <div class="scroll-cue">Scroll <span></span></div>
       <div class="signature">NOVA Agent</div>
     </section>
 
-    <section class="prompt-section" id="pricing">
-      <div class="prompt-card">
-        <div class="prompt-shine"></div>
+    <section class="prompt-section">
+      <div class="prompt-card tilt reveal">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
         <p>Build a design-forward galaxy travel landing page with immersive spaceflight visuals, luminous motion, layered depth, and a cinematic exploratory atmosphere.</p>
         <div class="agent"><span>NOVA</span> Agent</div>
       </div>
     </section>
 
     <section class="feature-grid" id="launch">
-      <article>
-        <span>01</span>
-        <h2>Layered Depth</h2>
-        <p>Multi-plane gradients, drifting starlight and parallax motion create a cinematic sense of scale.</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h2>Luminous Motion</h2>
-        <p>Soft aurora movement and cursor-reactive highlights make the interface feel alive without becoming noisy.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h2>Production Ready</h2>
-        <p>Pure HTML, CSS and JavaScript, responsive on desktop and mobile, with no build step required.</p>
-      </article>
+      <article class="tilt reveal"><span>01</span><h2>Layered Depth</h2><p>Multi-plane gradients, particles and parallax create a cinematic sense of scale.</p></article>
+      <article class="tilt reveal"><span>02</span><h2>Luminous Motion</h2><p>Fluid aurora fields and reactive highlights make every interaction feel alive.</p></article>
+      <article class="tilt reveal"><span>03</span><h2>Responsive System</h2><p>Built for touch, pointer and mobile screens with smooth GPU-friendly motion.</p></article>
     </section>
   </main>
 
   <dialog class="demo-modal" id="demoModal">
-    <button class="modal-close" id="modalClose" aria-label="關閉">×</button>
-    <div class="mini-orbit">
-      <div class="planet"></div>
-      <div class="orbit orbit--1"></div>
-      <div class="orbit orbit--2"></div>
-    </div>
-    <h2>Immersive demo</h2>
-    <p>Move your pointer across the page to shift the aurora, stars and glass highlights.</p>
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="mini-orbit"><div class="planet"></div><div class="orbit orbit--1"></div><div class="orbit orbit--2"></div></div>
+    <h2>Immersive demo active</h2>
+    <p>Move your pointer or tilt your phone. Scroll to trigger depth, counters and reveal motion.</p>
   </dialog>
-
   <script src="script.js"></script>
 </body>
 </html>

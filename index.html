@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#02070d" />
+  <meta name="theme-color" content="#111315" />
   <title>Nova — Immersive Web Experience</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="space-background" aria-hidden="true">
-    <canvas id="nebulaCanvas"></canvas>
-    <div class="global-vignette"></div>
+  <div class="metal-background" aria-hidden="true">
+    <canvas id="metalCanvas"></canvas>
+    <div class="metal-vignette"></div>
     <div class="cursor-glow"></div>
   </div>
 
@@ -28,7 +28,7 @@
       </header>
 
       <div class="hero-content">
-        <div class="announcement reveal"><span>New</span> AI-powered design generation now live ↗</div>
+        <div class="announcement reveal"><span>New</span> Dynamic material system now live ↗</div>
         <h1 class="reveal">Design the Future of Web<br />Experiences</h1>
         <p class="hero-copy reveal">Generate high-quality, production-ready landing pages, websites and web apps in minutes — no design team required.</p>
         <div class="hero-actions reveal">
@@ -49,23 +49,23 @@
 
     <section class="prompt-section">
       <div class="prompt-card tilt reveal">
-        <p>Build a design-forward galaxy travel landing page with immersive spaceflight visuals, luminous motion, layered depth, and a cinematic exploratory atmosphere.</p>
+        <p>Build a design-forward interface with a field of metallic square modules that respond physically to scrolling, light and depth.</p>
         <div class="agent"><span>NOVA</span> Agent</div>
       </div>
     </section>
 
     <section class="feature-grid" id="launch">
-      <article class="tilt reveal"><span>01</span><h2>Volumetric Depth</h2><p>Procedural cloud folds, internal light and layered stars create a true cinematic nebula.</p></article>
-      <article class="tilt reveal"><span>02</span><h2>Living Atmosphere</h2><p>The cloud field continuously evolves instead of sliding as a flat gradient.</p></article>
-      <article class="tilt reveal"><span>03</span><h2>Responsive Motion</h2><p>Pointer and device tilt subtly shift the camera while preserving mobile performance.</p></article>
+      <article class="tilt reveal"><span>01</span><h2>Metallic Grid</h2><p>Individual brushed-metal blocks create a continuous architectural surface.</p></article>
+      <article class="tilt reveal"><span>02</span><h2>Scroll Response</h2><p>Each module rises or falls at a different rate according to scroll direction and velocity.</p></article>
+      <article class="tilt reveal"><span>03</span><h2>Material Light</h2><p>Bevels, reflections and moving highlights give the field a dimensional industrial finish.</p></article>
     </section>
   </main>
 
   <dialog class="demo-modal" id="demoModal">
     <button class="modal-close" id="modalClose">×</button>
-    <div class="mini-orbit"><div class="planet"></div><div class="orbit orbit--1"></div><div class="orbit orbit--2"></div></div>
-    <h2>Volumetric field active</h2>
-    <p>Move your pointer or tilt your phone to change the nebula camera and internal light.</p>
+    <div class="metal-demo"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <h2>Reactive metal field active</h2>
+    <p>Scroll up and down to push the blocks in opposite directions. Move your pointer to shift the reflected light.</p>
   </dialog>
   <script src="script.js"></script>
 </body>

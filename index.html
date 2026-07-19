@@ -3,70 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#111315" />
-  <title>Nova — Immersive Web Experience</title>
+  <meta name="theme-color" content="#c9c6bd" />
+  <title>Visible Works — Concrete Museum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="metal-background" aria-hidden="true">
-    <canvas id="metalCanvas"></canvas>
-    <div class="metal-vignette"></div>
-    <div class="cursor-glow"></div>
-  </div>
+  <canvas id="museumCanvas" aria-hidden="true"></canvas>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="loading" id="loading"><span></span><p>Entering the museum</p></div>
 
-  <main class="shell">
-    <section class="hero" id="home">
-      <header class="nav reveal">
-        <a class="brand" href="#home">N</a>
-        <nav class="nav-links">
-          <a href="#home">Home</a><a href="#features">Features</a><a href="#showcase">Showcase</a><a href="#launch">Launch</a>
-        </nav>
-        <a class="pill pill--light magnetic" href="#launch">Start Creating ↗</a>
-      </header>
+  <header class="topbar">
+    <a class="wordmark" href="#entrance">VISIBLE WORKS</a>
+    <div class="topbar-center">CONCRETE MUSEUM / 2026</div>
+    <button class="sound-toggle" id="motionToggle" type="button">MOTION ON</button>
+  </header>
 
-      <div class="hero-content">
-        <div class="announcement reveal"><span>New</span> Dynamic material system now live ↗</div>
-        <h1 class="reveal">Design the Future of Web<br />Experiences</h1>
-        <p class="hero-copy reveal">Generate high-quality, production-ready landing pages, websites and web apps in minutes — no design team required.</p>
-        <div class="hero-actions reveal">
-          <a class="link-button magnetic" href="#launch">Start Creating ↗</a>
-          <button class="link-button link-button--ghost magnetic" id="demoButton" type="button">View Demo ▶</button>
-        </div>
-        <div class="metrics" id="features">
-          <article class="metric-card tilt reveal"><span class="metric-icon">◉</span><div><strong data-count="2.3">0</strong><em> Min</em></div><small>Average generation time</small></article>
-          <article class="metric-card tilt reveal"><span class="metric-icon">◎</span><div><strong data-count="12">0</strong><em>K+</em></div><small>Sites launched this month</small></article>
-        </div>
-        <div class="trusted reveal" id="showcase">
-          <span>Trusted by leading brands worldwide</span>
-          <div class="logo-row"><i>Stripe</i><i>Vercel</i><i>Linear</i><i>Figma</i><i>Notion</i></div>
-        </div>
-      </div>
-      <div class="signature">NOVA Agent</div>
-    </section>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="walk-cue" id="walkCue">SCROLL TO WALK <i></i></div>
 
-    <section class="prompt-section">
-      <div class="prompt-card tilt reveal">
-        <p>Build a design-forward interface with a field of metallic square modules that respond physically to scrolling, light and depth.</p>
-        <div class="agent"><span>NOVA</span> Agent</div>
+  <main class="scroll-track">
+    <section class="chapter chapter--hero" id="entrance" data-z="8">
+      <div class="chapter-card chapter-card--hero">
+        <span class="eyebrow">壹現工作室 / TAIPEI</span>
+        <h1>Space, light<br><em>and silence.</em></h1>
+        <p>一座持續向前的虛擬清水模美術館。滾動不是翻頁，而是在空間中行走。</p>
       </div>
     </section>
 
-    <section class="feature-grid" id="launch">
-      <article class="tilt reveal"><span>01</span><h2>Metallic Grid</h2><p>Individual brushed-metal blocks create a continuous architectural surface.</p></article>
-      <article class="tilt reveal"><span>02</span><h2>Scroll Response</h2><p>Each module rises or falls at a different rate according to scroll direction and velocity.</p></article>
-      <article class="tilt reveal"><span>03</span><h2>Material Light</h2><p>Bevels, reflections and moving highlights give the field a dimensional industrial finish.</p></article>
+    <section class="chapter chapter--left" id="interior" data-z="-28">
+      <div class="chapter-card">
+        <span class="index">01</span>
+        <span class="eyebrow">INTERIOR DESIGN</span>
+        <h2>Light becomes<br>the material.</h2>
+        <p>以自然光、比例與材質建立空間秩序，讓建築本身成為展示內容。</p>
+        <a href="#exhibition">Continue walking ↘</a>
+      </div>
+    </section>
+
+    <section class="chapter chapter--right" id="exhibition" data-z="-65">
+      <div class="chapter-card">
+        <span class="index">02</span>
+        <span class="eyebrow">EXHIBITION</span>
+        <h2>Objects held<br>in quiet tension.</h2>
+        <p>將展品、視線與停留時間編排為一段可以被感受的動線。</p>
+        <a href="#ai">Continue walking ↘</a>
+      </div>
+    </section>
+
+    <section class="chapter chapter--left" id="ai" data-z="-103">
+      <div class="chapter-card">
+        <span class="index">03</span>
+        <span class="eyebrow">AI × DESIGN</span>
+        <h2>Digital tools,<br>architectural mind.</h2>
+        <p>將生成式影像、互動技術與設計方法整合成新的空間敘事。</p>
+        <a href="#contact">Continue walking ↘</a>
+      </div>
+    </section>
+
+    <section class="chapter chapter--final" id="contact" data-z="-142">
+      <div class="chapter-card chapter-card--final">
+        <span class="eyebrow">THE END OF THE CORRIDOR</span>
+        <h2>Let’s create<br><em>the next space.</em></h2>
+        <a class="contact-link" href="mailto:studio@visible-works.com">studio@visible-works.com ↗</a>
+        <small>VISIBLE WORKS · TAIPEI · 2026</small>
+      </div>
     </section>
   </main>
 
-  <dialog class="demo-modal" id="demoModal">
-    <button class="modal-close" id="modalClose">×</button>
-    <div class="metal-demo"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    <h2>Reactive metal field active</h2>
-    <p>Scroll up and down to push the blocks in opposite directions. Move your pointer to shift the reflected light.</p>
-  </dialog>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
